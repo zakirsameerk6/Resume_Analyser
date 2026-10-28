@@ -4,8 +4,9 @@ Verifies PDF extraction, skill identification, TF-IDF cosine similarity,
 gap detection, learning recommendations, and CSV report export.
 """
 
+import os
 import unittest
-from src.pdf_extractor import clean_extracted_text
+from src.pdf_extractor import clean_extracted_text, extract_text_from_pdf
 from src.skill_extractor import SkillExtractor
 from src.matcher import Matcher, calculate_tfidf_similarity
 from src.recommender import LearningRecommender
@@ -26,6 +27,16 @@ class TestResumeAnalyzer(unittest.TestCase):
         self.assertIn("scientist", cleaned)
         self.assertIn("Python", cleaned)
         self.assertNotIn("\n\n\n\n", cleaned)
+
+    def test_pdf_file_extraction(self):
+        pdf_path = os.path.join("sample_data", "sample_resume_data_analyst.pdf")
+        if os.path.exists(pdf_path):
+            extracted = extract_text_from_pdf(pdf_path)
+            self.assertFalse(extracted["is_empty"])
+            self.assertGreater(extracted["word_count"], 50)
+            self.assertIn("Senior Data Analyst", extracted["text"])
+            self.assertIn("Power BI", extracted["text"])
+            self.assertEqual(extracted["num_pages"], 1)
 
     def test_skill_extraction_core(self):
         sample_text = """
