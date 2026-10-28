@@ -1,0 +1,16 @@
+Position: Senior Full Stack Engineer
+Company: NextWave Cloud Systems
+Location: Remote / San Francisco, CA
+
+About the Role:
+We are looking for a Senior Full Stack Engineer to lead the architecture of our cloud-native enterprise platform. You will build user-friendly web interfaces and high-throughput microservices.
+
+Requirements & Skills:
+- Proficient with modern JavaScript and TypeScript.
+- Strong hands-on experience with frontend frameworks, specifically React and Next.js.
+- Strong backend development skills using Node.js or Python (FastAPI).
+- Deep experience with relational databases (PostgreSQL) and caching (Redis).
+- Production experience deploying containerized services with Docker and Kubernetes.
+- Familiarity with cloud platforms such as AWS or Azure.
+- Thorough knowledge of CI/CD pipelines, Git, and automated Unit Testing.
+- Excellent communication and collaborative problem solving abilities.

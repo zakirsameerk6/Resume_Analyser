@@ -1,0 +1,25 @@
+Job Title: Senior Data & Analytics Specialist
+Company: CloudData Technologies
+Location: Remote / New York, NY
+
+Job Overview:
+We are seeking an experienced Data Analyst / Analytics Specialist to join our enterprise insights team. The candidate will be responsible for creating modern business intelligence solutions, building scalable analytics pipelines, and collaborating with cross-functional leadership.
+
+Key Responsibilities:
+- Design, build, and deploy high-impact dashboards and reports using Power BI and Looker.
+- Author and optimize complex SQL queries across cloud data warehouses such as Snowflake and PostgreSQL.
+- Perform exploratory data analysis and statistical modeling using Python (Pandas, NumPy, Scikit-learn).
+- Partner with data engineering teams to design ETL data pipelines using Apache Spark and Airflow.
+- Deploy analytics models and cloud reporting infrastructure on AWS (S3, Redshift).
+- Communicate technical insights clearly to non-technical stakeholders and executive leadership.
+- Participate in Agile/Scrum standups and sprint planning.
+
+Required Qualifications & Skills:
+- 3+ years of professional experience in Data Analysis or Business Intelligence.
+- Strong proficiency in SQL and relational databases (PostgreSQL, MySQL).
+- Advanced expertise in Python programming for data manipulation (Pandas, NumPy).
+- Deep experience in BI visualization tools (Power BI, Tableau, or Looker).
+- Hands-on experience with Cloud platforms, particularly AWS.
+- Familiarity with Big Data and pipeline technologies such as Snowflake and Apache Spark.
+- Excellent Problem Solving and Communication skills.
+- Bachelor's degree in Computer Science, Statistics, Mathematics, or equivalent field.

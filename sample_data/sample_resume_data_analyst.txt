@@ -1,0 +1,27 @@
+Senior Data Analyst
+Email: alex.turner@example.com | Phone: +1 555-019-2834 | Location: New York, NY
+LinkedIn: linkedin.com/in/alexturner-data | GitHub: github.com/alexturner
+
+PROFESSIONAL SUMMARY
+Results-driven Data Analyst with 4+ years of experience transforming complex business datasets into actionable executive insights. Proficient in Python, SQL, Excel, and Power BI. Proven track record of developing automated ETL pipelines, predictive machine learning models, and executive dashboards that increased sales retention by 18%.
+
+TECHNICAL SKILLS
+- Programming & Querying: Python (Pandas, NumPy, Scikit-learn), SQL (PostgreSQL, MySQL), Bash
+- Business Intelligence & Data Viz: Power BI, Tableau, Advanced Excel (VBA, Pivot Tables, XLOOKUP), Matplotlib, Seaborn
+- Data Engineering & Databases: PostgreSQL, MongoDB, ETL, Data Warehousing
+- Methodologies & Soft Skills: Agile, Scrum, Problem Solving, Statistical Analysis, A/B Testing, Cross-Functional Communication
+
+PROFESSIONAL EXPERIENCE
+Data Analyst | NexaCorp Solutions | 2022 - Present
+- Built and maintained automated Power BI and Tableau dashboards tracking KPIs across 12 departments, saving 20 weekly reporting hours.
+- Queried large-scale PostgreSQL databases using advanced SQL (window functions, CTEs, indexing) to analyze over 5M transactional records.
+- Developed Python predictive models using Scikit-learn and Pandas to forecast customer churn with 87% accuracy.
+- Conducted A/B testing and exploratory data analysis to evaluate marketing campaign performance.
+
+Junior Business Analyst | FinTech Global | 2020 - 2022
+- Utilized Advanced Excel and Python scripts to automate monthly financial reconciliations.
+- Designed interactive reports and data visualizations for senior stakeholders.
+- Partnered with product and engineering teams in Agile sprints to define data requirements.
+
+EDUCATION
+Bachelor of Science in Statistics & Computer Science | University of Michigan (2016 - 2020)
