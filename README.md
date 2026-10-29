@@ -72,7 +72,10 @@ An intelligent, privacy-first Python web application that extracts skills from r
 | Technology | Purpose |
 | :--- | :--- |
 | **Python 3.10+** | Core application logic and algorithmic pipeline |
-| **Streamlit** | Modern interactive web dashboard and state management |
+| **React 18 & Vite** | Modern, responsive frontend SPA with Lucide icons |
+| **Tailwind CSS** | Clean, responsive design with color-coded skill badges |
+| **FastAPI & Uvicorn** | High-performance asynchronous REST API backend |
+| **Streamlit** | Rapid interactive web dashboard and state management |
 | **PyMuPDF (`fitz`)** | Fast, robust PDF text extraction and document sanitization |
 | **spaCy** | Tokenization, lemmatization, and linguistic NLP processing |
 | **Scikit-learn** | TF-IDF Vectorization and Cosine Similarity computations |
@@ -86,11 +89,22 @@ An intelligent, privacy-first Python web application that extracts skills from r
 
 ```
 Resume_Analyser/
-├── app.py                      # Main Streamlit web application & UI
-├── requirements.txt            # Project dependencies
+├── app.py                      # Streamlit interactive web dashboard
+├── server.py                   # FastAPI REST API & static server
+├── requirements.txt            # Python dependencies
 ├── .gitignore                  # Git ignore rules
 ├── README.md                   # Comprehensive project documentation
-├── src/                        # Modular application source code
+├── frontend/                   # Modern React + Tailwind CSS SPA
+│   ├── package.json
+│   ├── vite.config.js
+│   ├── tailwind.config.js
+│   ├── index.html
+│   ├── dist/                   # Production build assets
+│   └── src/
+│       ├── App.jsx             # Main interactive React application
+│       ├── main.jsx
+│       └── index.css
+├── src/                        # Core Python intelligence modules
 │   ├── __init__.py
 │   ├── pdf_extractor.py        # PyMuPDF text extraction & cleanup
 │   ├── skill_database.py       # Taxonomy of skills, aliases, and learning resources
@@ -99,9 +113,9 @@ Resume_Analyser/
 │   ├── recommender.py          # Learning resource & action plan generator
 │   └── report_generator.py     # Pandas DataFrame & CSV exporter
 ├── sample_data/                # Built-in sample resumes & job descriptions
-│   ├── sample_resume_data_analyst.txt
+│   ├── sample_resume_data_analyst.pdf / .txt
 │   ├── sample_jd_data_analyst.txt
-│   ├── sample_resume_software_engineer.txt
+│   ├── sample_resume_software_engineer.pdf / .txt
 │   └── sample_jd_software_engineer.txt
 └── tests/                      # Automated unit test suite
     └── test_analyzer.py        # Comprehensive tests for all modules
@@ -117,7 +131,49 @@ git clone https://github.com/your-username/AI-Resume-Analyzer.git
 cd AI-Resume-Analyzer
 ```
 
-### 2. Create and Activate a Virtual Environment
+### 2. Create and Activate Virtual Environment
+- **Windows (PowerShell)**:
+  ```powershell
+  python -m venv .venv
+  .\.venv\Scripts\Activate.ps1
+  ```
+- **macOS / Linux**:
+  ```bash
+  python3 -m venv .venv
+  source .venv/bin/activate
+  ```
+
+### 3. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 🖥️ Choose Your Frontend Experience
+
+### Option A: Modern React + FastAPI Full-Stack App (Recommended)
+Launch the FastAPI backend (which also serves the compiled React frontend):
+```powershell
+.\.venv\Scripts\python.exe server.py
+```
+Open **`http://localhost:8000`** in your browser!
+
+*For active frontend React development with Hot Module Replacement (HMR):*
+```bash
+cd frontend
+npm run dev
+```
+Open **`http://localhost:5173`**.
+
+---
+
+### Option B: Streamlit Web Dashboard
+Run the standalone Streamlit application:
+```powershell
+.\.venv\Scripts\streamlit.exe run app.py
+```
+Open **`http://localhost:8501`** in your browser!
 - **Windows (PowerShell)**:
   ```powershell
   python -m venv .venv
