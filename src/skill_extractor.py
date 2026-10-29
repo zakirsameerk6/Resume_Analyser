@@ -25,12 +25,11 @@ def get_spacy_nlp():
 
     try:
         import spacy
-        try:
+        if hasattr(spacy.util, "is_package") and spacy.util.is_package("en_core_web_sm"):
             _SPACY_NLP = spacy.load("en_core_web_sm")
-        except OSError:
-            # Fall back to blank English tokenizer pipeline
+        else:
             _SPACY_NLP = spacy.blank("en")
-    except ImportError:
+    except Exception:
         _SPACY_NLP = None
 
     return _SPACY_NLP
