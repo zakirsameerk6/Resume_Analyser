@@ -5,6 +5,8 @@
 [![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-TF--IDF%20%26%20Cosine%20Similarity-F7931E.svg)](https://scikit-learn.org/)
 [![spaCy & Regex](https://img.shields.io/badge/NLP-spaCy%20%26%20Pattern%20Matching-09A3D5.svg)](https://spacy.io/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Deploy to Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/deploy?repository=zakirsameerk6/Resume_Analyser&branch=main&mainModule=app.py)
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
 
 An intelligent, privacy-first Python web application that extracts skills from resumes, analyzes alignment against job descriptions, computes skill coverage and TF-IDF text similarity scores, pinpoints missing competencies, and generates curated learning recommendations.
 
@@ -171,30 +173,37 @@ Open **`http://localhost:5173`**.
 ### Option B: Streamlit Web Dashboard
 Run the standalone Streamlit application:
 ```powershell
-.\.venv\Scripts\streamlit.exe run app.py
+.\.venv\Scripts\python.exe -m streamlit run app.py
 ```
 Open **`http://localhost:8501`** in your browser!
-- **Windows (PowerShell)**:
-  ```powershell
-  python -m venv .venv
-  .\.venv\Scripts\Activate.ps1
-  ```
-- **macOS / Linux**:
-  ```bash
-  python3 -m venv .venv
-  source .venv/bin/activate
-  ```
 
-### 3. Install Dependencies
-```bash
-pip install -r requirements.txt
-```
+---
 
-### 4. Run the Streamlit Application
-```bash
-streamlit run app.py
-```
-Open your browser at `http://localhost:8501`.
+## 🌐 Live Deployment Guide (Get a Free Public URL)
+
+You can deploy this application online for free in under 60 seconds so recruiters and interviewers can use it live:
+
+### 1. Streamlit Community Cloud (Instant 1-Click Deploy - Free Forever)
+1. Visit **[share.streamlit.io](https://share.streamlit.io/)** and click **"Continue with GitHub"**.
+2. Click **"New app"**.
+3. Set:
+   - **Repository:** `zakirsameerk6/Resume_Analyser`
+   - **Branch:** `main`
+   - **Main file path:** `app.py`
+4. Click **"Deploy!"**.
+5. Streamlit will build your app and give you a free public link:
+   👉 **`https://<your-custom-name>.streamlit.app`**
+
+### 2. Render.com (Deploy Full-Stack React + FastAPI - Free)
+1. Go to **[render.com](https://render.com/)** and sign in with GitHub.
+2. Click **"New +"** -> **"Web Service"** -> select `zakirsameerk6/Resume_Analyser`.
+3. Set:
+   - **Environment:** `Python`
+   - **Build Command:** `pip install -r requirements.txt`
+   - **Start Command:** `python -m uvicorn server:app --host 0.0.0.0 --port $PORT`
+4. Click **"Create Web Service"**.
+5. Render gives you a public HTTPS URL:
+   👉 **`https://resume-analyser-xxx.onrender.com`**
 
 ---
 
