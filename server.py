@@ -186,6 +186,7 @@ def export_csv(req: MatchRequest):
 frontend_dist = os.path.join(os.path.dirname(os.path.abspath(__file__)), "frontend", "dist")
 if os.path.exists(frontend_dist):
     from fastapi.staticfiles import StaticFiles
+    app.mount("/resumeanalyser", StaticFiles(directory=frontend_dist, html=True), name="resumeanalyser")
     app.mount("/", StaticFiles(directory=frontend_dist, html=True), name="frontend")
 
 
