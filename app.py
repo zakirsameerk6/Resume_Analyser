@@ -34,116 +34,153 @@ CUSTOM_CSS = """
 <style>
     /* Main container adjustments */
     .block-container {
-        padding-top: 1.8rem;
+        padding-top: 1.5rem;
         padding-bottom: 3rem;
     }
     
     /* Hero Header */
     .hero-container {
-        background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #1e3a8a 100%);
         color: white;
-        padding: 24px 28px;
-        border-radius: 12px;
-        margin-bottom: 24px;
-        box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+        padding: 32px 36px;
+        border-radius: 20px;
+        margin-bottom: 28px;
+        box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.25);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        position: relative;
+    }
+    .hero-tag {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.12);
+        color: #c7d2fe;
+        font-size: 0.75rem;
+        font-weight: 700;
+        padding: 4px 12px;
+        border-radius: 9999px;
+        margin-bottom: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
     }
     .hero-title {
-        font-size: 2.1rem;
-        font-weight: 700;
-        margin-bottom: 6px;
+        font-size: 2.4rem;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        margin-bottom: 8px;
+        color: #ffffff;
     }
     .hero-subtitle {
         font-size: 1.05rem;
-        opacity: 0.92;
+        color: #e0e7ff;
+        line-height: 1.5;
         margin: 0;
+        max-width: 800px;
     }
     
     /* Metric Score Card */
     .score-card {
-        background-color: #f8fafc;
+        background: #ffffff;
         border: 1px solid #e2e8f0;
-        border-radius: 10px;
-        padding: 18px;
+        border-radius: 18px;
+        padding: 22px 18px;
         text-align: center;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.03);
         margin-bottom: 12px;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .score-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.06);
     }
     .score-val {
-        font-size: 2.2rem;
-        font-weight: 800;
-        line-height: 1.2;
+        font-size: 2.4rem;
+        font-weight: 900;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
     }
     .score-label {
-        font-size: 0.88rem;
-        font-weight: 600;
-        color: #475569;
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: #64748b;
         text-transform: uppercase;
-        letter-spacing: 0.05em;
-        margin-top: 4px;
+        letter-spacing: 0.06em;
+        margin-top: 6px;
     }
     
     /* Skill Badge Pills */
     .badge-matched {
-        display: inline-block;
+        display: inline-flex;
+        align-items: center;
         background-color: #ecfdf5;
         color: #065f46;
-        border: 1px solid #a7f3d0;
-        padding: 4px 12px;
-        margin: 3px 4px;
+        border: 1px solid #6ee7b7;
+        padding: 5px 14px;
+        margin: 4px 4px;
         border-radius: 9999px;
         font-size: 0.85rem;
-        font-weight: 600;
+        font-weight: 700;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.03);
     }
     .badge-missing {
-        display: inline-block;
+        display: inline-flex;
+        align-items: center;
         background-color: #fef2f2;
         color: #991b1b;
-        border: 1px solid #fecaca;
-        padding: 4px 12px;
-        margin: 3px 4px;
+        border: 1px solid #fca5a5;
+        padding: 5px 14px;
+        margin: 4px 4px;
         border-radius: 9999px;
         font-size: 0.85rem;
-        font-weight: 600;
+        font-weight: 700;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.03);
     }
     .badge-extra {
-        display: inline-block;
+        display: inline-flex;
+        align-items: center;
         background-color: #eff6ff;
         color: #1e40af;
-        border: 1px solid #bfdbfe;
-        padding: 4px 12px;
-        margin: 3px 4px;
+        border: 1px solid #93c5fd;
+        padding: 5px 14px;
+        margin: 4px 4px;
         border-radius: 9999px;
         font-size: 0.85rem;
-        font-weight: 600;
+        font-weight: 700;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.03);
     }
     
     /* Recommendation Card */
     .rec-card {
         background: #ffffff;
         border: 1px solid #e2e8f0;
-        border-left: 4px solid #3b82f6;
-        border-radius: 8px;
-        padding: 14px 18px;
-        margin-bottom: 12px;
-        box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+        border-left: 5px solid #4f46e5;
+        border-radius: 14px;
+        padding: 16px 20px;
+        margin-bottom: 14px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+        transition: transform 0.15s ease;
+    }
+    .rec-card:hover {
+        transform: translateX(3px);
     }
     .rec-title {
-        font-size: 1rem;
-        font-weight: 700;
-        color: #1e293b;
+        font-size: 1.05rem;
+        font-weight: 800;
+        color: #0f172a;
         margin-bottom: 4px;
     }
     .rec-meta {
         font-size: 0.82rem;
         color: #64748b;
-        margin-bottom: 6px;
+        margin-bottom: 8px;
     }
     .rec-plan {
         font-size: 0.88rem;
         color: #334155;
         background-color: #f8fafc;
-        padding: 6px 10px;
-        border-radius: 6px;
+        padding: 8px 12px;
+        border-radius: 8px;
+        border: 1px solid #f1f5f9;
+        line-height: 1.5;
     }
 </style>
 """
