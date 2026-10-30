@@ -244,3 +244,11 @@ When presenting this project to interviewers:
 
 ## 📄 License
 This project is open-source and licensed under the [MIT License](LICENSE).
+
+
+Step 1. Activate virtual environment
+.\.venv\Scripts\Activate.ps1
+
+
+Step 2. Start Streamlit
+streamlit run app.py
