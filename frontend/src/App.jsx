@@ -305,8 +305,7 @@ export default function App() {
               rel="noreferrer"
               className="text-xs font-semibold px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-white flex items-center space-x-1.5 transition-colors shadow-sm"
             >
-              <Code2 className="w-3.5 h-3.5" />
-              <span className="hidden sm:inline">GitHub Repo</span>
+              <span className="hidden sm:inline">Git-Repo</span>
             </a>
           </div>
         </div>
@@ -318,7 +317,7 @@ export default function App() {
         <div className="relative rounded-3xl bg-gradient-to-br from-slate-900 via-indigo-950 to-blue-900 text-white p-7 sm:p-10 shadow-2xl shadow-indigo-950/20 mb-8 overflow-hidden border border-slate-800">
           <div className="relative z-10 max-w-3xl">
             <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md text-xs font-semibold text-indigo-200 mb-4 border border-white/15 shadow-inner">
-              <Sparkles className="w-3.5 h-3.5 text-amber-300" />
+              {/* <Sparkles className="w-3.5 h-3.5 text-amber-300" /> */}
               <span>Offline Privacy-First NLP & Skill Taxonomy</span>
             </div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight mb-3">
@@ -362,7 +361,7 @@ export default function App() {
         )}
 
         {/* 1-Click Interactive Demo Selector Bar */}
-        <div className="bg-white rounded-2xl border border-slate-200/80 p-4 mb-6 shadow-sm flex flex-wrap items-center justify-between gap-4">
+        {/* <div className="bg-white rounded-2xl border border-slate-200/80 p-4 mb-6 shadow-sm flex flex-wrap items-center justify-between gap-4">
           <div className="flex items-center space-x-2 text-xs font-semibold text-slate-600">
             <Flame className="w-4 h-4 text-amber-500 animate-pulse" />
             <span>Try 1-Click Sample Profiles:</span>
@@ -390,7 +389,7 @@ export default function App() {
               Clear
             </button>
           </div>
-        </div>
+        </div> */}
 
         {/* Two-Column Input Workspace */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
@@ -1036,11 +1035,69 @@ export default function App() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-white border-t border-slate-200/80 py-6 text-center text-xs text-slate-500">
+      {/* <footer className="bg-white border-t border-slate-200/80 py-6 text-center text-xs text-slate-500">
         <p className="font-medium">
           CareerMatch AI • Resume Analyzer & Job Fit Predictor • Built with Python, PyMuPDF, Scikit-learn, React 18 & Tailwind CSS
         </p>
-      </footer>
+      </footer> */}
+      
+
+
+
+<footer className="relative overflow-hidden border-t border-slate-200 bg-gradient-to-b from-white to-slate-50 px-6 py-8">
+  <div className="mx-auto max-w-7xl">
+
+    <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
+
+      {/* Brand */}
+      <div className="text-center md:text-left">
+        <h3 className="text-xl font-extrabold tracking-tight text-slate-900">
+          CareerMatch <span className="bg-gradient-to-r from-blue-600 to-violet-600 bg-clip-text text-transparent">AI</span>
+        </h3>
+
+        <p className="mt-1 text-sm text-slate-500">
+          Smart Resume Analysis. Better Career Decisions.
+        </p>
+      </div>
+
+      {/* Technology Stack */}
+      <div className="flex flex-wrap justify-center gap-2">
+        {["Python", "React 18", "Tailwind CSS", "Scikit-learn", "PyMuPDF"].map((tech) => (
+<span
+  key={tech}
+  className="cursor-pointer rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-semibold text-slate-600 shadow-sm
+  transition-all duration-300 ease-out
+  hover:-translate-y-1
+  hover:scale-110
+  hover:border-blue-500
+  hover:bg-blue-600
+  hover:text-white
+  hover:shadow-lg
+  hover:shadow-blue-200/60"
+>
+  {tech}
+</span>
+        ))}
+      </div>
+    </div>
+
+    {/* Bottom Section */}
+    <div className="mt-7 flex flex-col items-center justify-between gap-3 border-t border-slate-200 pt-5 text-center sm:flex-row">
+
+      <p className="text-xs text-slate-500">
+        © {new Date().getFullYear()} CareerMatch AI. All rights reserved.
+      </p>
+
+      <p className="flex items-center gap-1.5 text-xs text-slate-500">
+        Crafted with
+        <span className="text-red-500">♥</span>
+        for smarter career growth.
+      </p>
+
+    </div>
+  </div>
+</footer>
+      
     </div>
   );
 }
